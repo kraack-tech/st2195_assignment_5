@@ -1,48 +1,101 @@
 {
  "cells": [
   {
-   "cell_type": "code",
-   "execution_count": null,
-   "id": "825d40dd",
+   "cell_type": "markdown",
+   "id": "621fbba0",
    "metadata": {},
-   "outputs": [],
    "source": [
-    "def is_divisible_by_k(x, k):\n",
-    "'''\n",
-    "Checks whether x is divisible by k.\n",
-    "'''\n",
-    "assert x%k == 0"
+    "## Practice assignment 5"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "0dafd0d2",
+   "metadata": {},
+   "source": [
+    "Checks whether x is divisible by k."
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
-   "id": "de87169f",
+   "execution_count": 1,
+   "id": "7f032d85",
    "metadata": {},
    "outputs": [],
    "source": [
-    "'''\n",
-    "Store all the integers that are multiples of 2 or 5 or 7 that are lower\n",
-    "or equal to 1000 (excluding doubles)\n",
-    "'''\n",
-    "x = ()\n",
-    "for i in range(1000):\n",
-    "if (is_divisible_by_k(x, 2) & is_divisible_by_k(x, 3)) |\n",
-    "is_divisible_by_k(x, 7):\n",
-    "x.append(i)"
+    "def is_divisible_by_k(x,k):\n",
+    "  if(x%k==0):\n",
+    "    print(\"Divisible\")\n",
+    "  else:\n",
+    "    print(\"Not divisible\")"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
-   "id": "2b62f7eb",
+   "execution_count": 2,
+   "id": "f68e1625",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Divisible\n",
+      "Not divisible\n"
+     ]
+    }
+   ],
+   "source": [
+    "# test the function:\n",
+    "is_divisible_by_k(10,2) # Should return \"Divisible\"\n",
+    "is_divisible_by_k(37,2) # Should return \"Not divisible\""
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ef2aba9e",
+   "metadata": {},
+   "source": [
+    "Store all the integers that are multiples of 2 or 5 or 7 that are lower or equal to 1000 (excluding doubles)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "70bc8513",
    "metadata": {},
    "outputs": [],
    "source": [
-    "'''\n",
+    "x = [x for x in range(1000) if x%2 == 0 or x%5 == 0 or x%7 == 0]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "eba91ba1",
+   "metadata": {},
+   "source": [
     "Sum all the integers that are multiples of 2 or 5 or 7 that are lower\n",
-    "or equal to 1000 (excluding doubles)\n",
-    "'''\n",
+    "or equal to 1000 (excluding doubles)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "26b7ca2f",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "327927"
+      ]
+     },
+     "execution_count": 4,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
     "sum(x)"
    ]
   }
